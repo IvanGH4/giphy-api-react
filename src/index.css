@@ -1,13 +1,137 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.app {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.search {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(107, 107, 231);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: .9;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.card h2::first-letter {
+  text-transform: uppercase;
+}
+
+.card img {
+  width: 70%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card a {
+  text-decoration: none;
+  padding: 10px 0px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: rgb(30, 189, 30);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(71, 71, 71);
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer a {
+  color: #eee;
+  margin-top: 5px;
+}
+
+@media(max-width: 450px) {
+  header {
+    flex-direction: column;
+  }
+  .search-box {
+    display: flex;
+    margin-top: 10px;
+  }
+  .wrapper {
+    padding: 0 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media(max-width: 650px) {
+  .card {
+    width: 70%;
+  }
 }
